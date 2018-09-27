@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="right-dir" unicode="&#xe800;" d="M0 580l400-230-400-230 0 460z" horiz-adv-x="400" />
+
+<glyph glyph-name="up-dir" unicode="&#xe801;" d="M0 150l230 400 230-400-460 0z" horiz-adv-x="460" />
+
+<glyph glyph-name="left-dir" unicode="&#xe802;" d="M400 580l0-460-400 230z" horiz-adv-x="400" />
+
+<glyph glyph-name="down-dir" unicode="&#xe803;" d="M460 550l-230-400-230 400 460 0z" horiz-adv-x="460" />
+
+<glyph glyph-name="th-list" unicode="&#xe80b;" d="M286 154v-108q0-22-16-37t-38-16h-178q-23 0-38 16t-16 37v108q0 22 16 38t38 15h178q23 0 38-15t16-38z m0 285v-107q0-22-16-38t-38-15h-178q-23 0-38 15t-16 38v107q0 23 16 38t38 16h178q23 0 38-16t16-38z m714-285v-108q0-22-16-37t-38-16h-535q-23 0-38 16t-16 37v108q0 22 16 38t38 15h535q23 0 38-15t16-38z m-714 571v-107q0-22-16-38t-38-16h-178q-23 0-38 16t-16 38v107q0 22 16 38t38 16h178q23 0 38-16t16-38z m714-286v-107q0-22-16-38t-38-15h-535q-23 0-38 15t-16 38v107q0 23 16 38t38 16h535q23 0 38-16t16-38z m0 286v-107q0-22-16-38t-38-16h-535q-23 0-38 16t-16 38v107q0 22 16 38t38 16h535q23 0 38-16t16-38z" horiz-adv-x="1000" />
+
+<glyph glyph-name="angle-circled-left" unicode="&#xf137;" d="M507 72l57 57q11 10 11 25t-11 25l-171 171 171 171q11 11 11 25t-11 26l-57 57q-10 10-25 10t-25-10l-253-254q-11-10-11-25t11-25l253-253q11-11 25-11t25 11z m350 278q0-117-57-215t-156-156-215-58-216 58-155 156-58 215 58 215 155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
+
+<glyph glyph-name="angle-circled-right" unicode="&#xf138;" d="M400 72l254 253q10 11 10 25t-10 25l-254 254q-10 10-25 10t-25-10l-57-57q-11-11-11-26t11-25l171-171-171-171q-11-11-11-25t11-25l57-57q11-11 25-11t25 11z m457 278q0-117-57-215t-156-156-215-58-216 58-155 156-58 215 58 215 155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
+</font>
+</defs>
+</svg>
