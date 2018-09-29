@@ -123,11 +123,11 @@
       /* Относится к position: sticky - Верхний край оглавления ниже родительского блока */
       top: 25px;
       /* Ширина свернутого Оглавления */
-      width: 50px; min-height: 50px;
+      width: 50px;
       /* Текст в Оглавлении по центру */
       text-align: center;
       /* Цвет текста в Оглавлении */
-      color: red;
+/*      color: red;*/
       /*поля */
       margin: 2px 2px;
       /* рамка блока */
@@ -140,19 +140,19 @@
       border-radius: 5px;
     }
 		/* Стиль заголовка Оглавлени */
-    div.toc h4 {
-      margin: 1px;
-      padding: 1px;
+    div.toc h4.work {
+      box-sizing: content-box;
+      margin: 1px auto;
       display: flex;
-/*		text-align: right;*/
+      cursor: pointer;
+      justify-content:flex-end;
     }
 
     /* Стиль треугольника */
     .tr {
-      margin-top: 5px;
-      width: 0; height: 0;
-      border-top: 40px solid red;
-      border-left: 40px solid transparent;
+      margin: 5px;
+      border-top: 10px solid blue;
+      border-left: 10px solid transparent;
     }
 
     /* Стили списка в Оиглвлени */
@@ -280,7 +280,10 @@
         <!-- НАЧАЛО СТАТЬИ -->
         <div class="toc">
           <!--  Оглавление страницы - прозрачное -->
-          <h4><span>Оглавление страницы:</span><span class="tr"></span></h4> <!-- Текст заголовка  -->
+          <h4 class="work">
+            <span>Огл</span> <!-- Текст управляется скриптом -->
+            <span class="tr"></span>
+          </h4>
           <ol>
             <li><a href="#toc_1">Введение.</a></li>
             <li><a href="#toc_2">Пример.</a></li>
@@ -322,12 +325,14 @@
     </div> <!-- КОНЕЦ 3 колоночной верстки  -->
     <footer> ФУТЕР </footer>
   </div> <!-- КОНЕЦ Контейнера сайта -->
-	<link rel="stylesheet" href="fontello/css/fontello.css"/>
+
   <script src="JSmain/jquery-3.3.1.min.js"></script>
   <script>
     $(document).ready(function() {
       // Удаляю текст заголовка ОГЛАВЛЕНИЯ СТРАНИЦЫ.
       //$('div.toc h4').text(" ");
+      $('div.toc h4.work span:first-child').text(" ");
+
       // ============= НАЧАЛО УПРАВЛЕНИЕ ОГЛАВЛЕНИЕМ СТРАНИЦЫ ==============================
       var hash = window.location.hash;
       /* Получаем hash адресной строки - в конце строки #... (типа #toc_3):
@@ -346,14 +351,18 @@
       // Обрабатываем клик по свернутому Оглавлению (h4).
       $('div.toc h4').click(function() {
         var el = $(this);
+//        alert(el.prop("tagName") + " ширина: " + el.width());
         if (el.width() < 50) {
           el.parent().css({
             "width": "250",
             "backgroundColor": "rgba(246, 246, 246, 1.0)"
           });
           $('.toc ol').css("display", "block");
-        } else if ((el.width() > 50)) {
-          $el.parent().css({
+          $('div.toc h4.work span:first-child').text("Оглавление страницы:");
+        }
+        else if ($(this).width() > 50) {
+          $('div.toc h4.work span:first-child').text("");
+          el.parent().css({
             "width": "50",
             "backgroundColor": "rgba(246, 246, 246, .3)"
           });
@@ -365,6 +374,7 @@
         $('div.toc ol li').removeClass('selected'); // У ВСЕХ li удаляем класс
         $(this).addClass('selected');
         $('.toc ol').css("display", "none");
+        $('div.toc h4.work span:first-child').text(" ");
         $('.toc').css({
           "width": "50",
           "backgroundColor": "rgba(246, 246, 246, .3)"
